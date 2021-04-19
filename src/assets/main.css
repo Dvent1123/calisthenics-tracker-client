@@ -44,6 +44,10 @@ p {
   font-size: 1em;
 }
 
+.bebas-neue {
+  font-family: 'Bebas Neue', cursive;
+}
+
 .wrapper {
   padding: 0em;
   max-width: 1400px;
@@ -124,9 +128,12 @@ li {
           justify-content: flex-start;
 }
 
+
+
 .app-title {
   margin-top: 2.5em;
   margin-bottom: .25em;
+  font-family:'bebas neue', Helvetica, sans-serif;
 }
 
 .index-header {
@@ -154,8 +161,9 @@ li {
 
 .landing-page-start a {
   color: white;
-  font-size: 1.25em;
+  font-size: 1.6em;
   font-weight: bold;
+  font-family:Arial, Helvetica, sans-serif;
 }
 
 .landing-page-start:hover {
@@ -167,13 +175,28 @@ li {
 }
 
 .landing-page-signin {
-  padding: 0;
-  font-size: 1.25em;
+  width: 25%;
+  height: 6vh;
+  border: none;
+  border-radius: 5em;
+  margin: 1em 0;
+  background: linear-gradient(to right, #01BAEF, #01BAEF);
+  box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.04);
 }
 
 .landing-page-signin a {
-  color: #01BAEF;
-  text-decoration: underline;
+  color: white;
+  font-size: 1.2em;
+  font-weight: bold;
+  font-family:Arial, Helvetica, sans-serif;
+}
+
+.landing-page-signin:hover {
+  cursor: pointer;
+}
+
+.landing-page-signin:hover a {
+  text-transform: uppercase;
 }
 
 .landing-page-header {
@@ -208,6 +231,7 @@ li {
 .card .title {
   font-size: 1.5em;
   color: #0B4F6C;
+  font-family:'bebas neue', Helvetica, sans-serif;
 }
 
 .card .icon {
@@ -586,6 +610,7 @@ li {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    font-family:Arial, Helvetica, sans-serif;
   }
   li {
     padding: 0 15px;

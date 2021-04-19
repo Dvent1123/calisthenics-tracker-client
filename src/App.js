@@ -12,20 +12,26 @@ const App = () => {
           <div className='landing-page-container'>
             <h3 className='app-title'>3 Skills to Master Before I Die</h3>
             <h1 className="index-header">Skills Tracking</h1>
-            <p className='index-words'>See where you are in your Calisthenics journey with our interactive Calisthenics map.
-            </p>
+            <p className='index-words'>See where you are in your Calisthenics journey with our interactive Calisthenics map. </p>
+            <div className="banner" align="center">
+            <br/>
+            <Link to="/signup">
             <button className='landing-page-start'>                    
               <li>
-                <Link to="/signup">
-                  Signup Now!
-                </Link>
+                  <a> Sign Up Now! </a>
               </li>
             </button>
-              <li className='landing-page-signin'>
-                <Link to="/signin">
-                  Signin
-                </Link>
+            </Link>
+            <br/>
+            <Link to="/signin">
+            <button className='landing-page-signin'>
+              <li>
+                  <a> Sign In </a>
               </li>
+            </button>
+            </Link>
+            <br/> <br/>
+            </div>
           </div>
           <div className='landing-page-header'>
           {/* spacer */}
