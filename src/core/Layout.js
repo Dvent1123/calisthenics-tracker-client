@@ -27,15 +27,17 @@ const Layout = ({children, match, history}) => {
 
         {!isAuth() && (
             <Fragment>
-                <li className='nav-link'>
-                    <Link to="/signin" style={isActive('/signin')}>
-                        Signin
-                    </Link>
-                </li>
                 <li>
                     <Link to="/signup" style={isActive('/signup')}>
-                        Signup
+                        Sign Up
                     </Link>
+                </li>
+                <li className='nav-link'>
+                    
+                    <Link to="/signin" style={isActive('/signin')}>
+                        Sign In
+                    </Link>
+                   
                 </li>
             </Fragment>
         )}
@@ -81,7 +83,7 @@ const Layout = ({children, match, history}) => {
                         });
                     }}
                 >
-                    Signout
+                    Sign Out
                 </span>
             </li>
         )}
