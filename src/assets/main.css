@@ -44,10 +44,6 @@ p {
   font-size: 1em;
 }
 
-.bebas-neue {
-  font-family: 'Bebas Neue', cursive;
-}
-
 .wrapper {
   padding: 0em;
   max-width: 1400px;
@@ -128,12 +124,9 @@ li {
           justify-content: flex-start;
 }
 
-
-
 .app-title {
   margin-top: 2.5em;
   margin-bottom: .25em;
-  font-family:'bebas neue', Helvetica, sans-serif;
 }
 
 .index-header {
@@ -159,43 +152,43 @@ li {
           box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.04);
 }
 
-.landing-page-start a {
+.landing-page-start li {
   color: white;
-  font-size: 1.6em;
+  font-size: 1.25em;
   font-weight: bold;
-  font-family:Arial, Helvetica, sans-serif;
 }
 
 .landing-page-start:hover {
   cursor: pointer;
 }
 
-.landing-page-start:hover a {
+.landing-page-start:hover li {
   text-transform: uppercase;
 }
 
 .landing-page-signin {
-  width: 25%;
-  height: 6vh;
+  width: 45%;
+  height: 8vh;
   border: none;
   border-radius: 5em;
   margin: 1em 0;
+  background: -webkit-gradient(linear, left top, right top, from(#01BAEF), to(#01BAEF));
   background: linear-gradient(to right, #01BAEF, #01BAEF);
-  box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.04);
+  -webkit-box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.04);
+          box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.04);
 }
 
-.landing-page-signin a {
+.landing-page-signin li {
   color: white;
-  font-size: 1.2em;
+  font-size: 1.25em;
   font-weight: bold;
-  font-family:Arial, Helvetica, sans-serif;
 }
 
 .landing-page-signin:hover {
   cursor: pointer;
 }
 
-.landing-page-signin:hover a {
+.landing-page-signin:hover li {
   text-transform: uppercase;
 }
 
@@ -231,7 +224,6 @@ li {
 .card .title {
   font-size: 1.5em;
   color: #0B4F6C;
-  font-family:'bebas neue', Helvetica, sans-serif;
 }
 
 .card .icon {
@@ -436,7 +428,6 @@ li {
 }
 
 /* ^-- The margin bottom is necessary for the drop shadow otherwise it gets clipped in certain cases. */
-/* Top Half of card, image. */
 .property-image {
   height: 18em;
   width: 14em;
@@ -482,7 +473,6 @@ li {
   text-transform: uppercase;
 }
 
-/* Bottom Card Section */
 .property-description {
   background-color: #FAFAFC;
   height: 18em;
@@ -610,7 +600,6 @@ li {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    font-family:Arial, Helvetica, sans-serif;
   }
   li {
     padding: 0 15px;

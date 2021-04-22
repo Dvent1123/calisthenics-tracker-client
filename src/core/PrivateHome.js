@@ -47,7 +47,7 @@ const PrivateHome = ({ history}) => {
         })
     }
 
-    const { role, name, email, buttonText } = values
+    const { name } = values
 
     const handleSkillUnlock = (skillID, unlockedSkill) => {
         let unlockedSkillsArray = updatedSkillArray(exerciseData, skillID, unlockedSkill)

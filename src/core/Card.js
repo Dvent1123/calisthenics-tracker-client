@@ -28,7 +28,7 @@ const Card = ({skill, handleSkillUnlock}) => {
             isOn ?            
             <div className='property-card'>
                     <div className='lock'>
-                        <img className='lock-image' src={lock} />
+                        <img alt='lock' className='lock-image' src={lock} />
                         <h4 className='skill-title'> {exercise} </h4>                
                     </div> 
                     <div className='property-description'>
@@ -38,10 +38,10 @@ const Card = ({skill, handleSkillUnlock}) => {
                 </div> :
                 <div className="property-card">
                     <div className='lock'>
-                        <img className='lock-image' src={unlock} />                
+                        <img alt='unlock' className='lock-image' src={unlock} />                
                     </div>
                     <div className='property-image'>
-                        <img className='skill-image' src={images[id]} />
+                        <img alt='skill' className='skill-image' src={images[id]} />
                     </div>
                 </div>
             }

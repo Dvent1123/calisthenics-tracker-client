@@ -130,7 +130,7 @@ li {
     margin: 1em 0;
     background: linear-gradient(to right, #01BAEF, #01BAEF);
     box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.04);
-    a{
+    li{
         color: white;
         font-size: 1.25em;
         font-weight: bold;
@@ -139,7 +139,7 @@ li {
 
 .landing-page-start:hover {
     cursor: pointer;
-    a{
+    li{
         text-transform: uppercase;
     }
 }
@@ -152,10 +152,17 @@ li {
     margin: 1em 0;
     background: linear-gradient(to right, #01BAEF, #01BAEF);
     box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.04);
-    a{
+    li{
         color: white;
         font-size: 1.25em;
         font-weight: bold;
+    }
+}
+
+.landing-page-signin:hover {
+    cursor: pointer;
+    li{
+        text-transform: uppercase;
     }
 }
 
@@ -170,7 +177,6 @@ li {
 .divider
 {
 	position: relative;
-	// margin-top: 90px;
 	height: 1px;
 }
 
@@ -181,11 +187,9 @@ li {
 .card {
     background: white;
     box-shadow: 0 0 5px rgba(0,0,0,0.1);
-    // border: 0.1em solid black;
     border-radius: 5px;
     margin: 2em;
     width: 100%;
-    // height: 100vh;
     max-height: 500px;
     max-width: 300px;
     padding: 1em;
@@ -374,7 +378,6 @@ li {
 }
 /* ^-- The margin bottom is necessary for the drop shadow otherwise it gets clipped in certain cases. */
 
-/* Top Half of card, image. */
 
 .property-image
 {
@@ -416,28 +419,20 @@ li {
     text-transform: uppercase;
 }
 
-/* Bottom Card Section */
 
 .property-description
 {
   background-color: #FAFAFC;
   height:18em;
   width:14em;
-//   position:absolute;
   top: 0px;
   bottom:0em;
-//   display: flex;
-//   flex-direction: column;
   -webkit-transition:all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
   -o-transition:all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
   transition:all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
   padding: 0em 1em;
   text-align:center;
 
-    // h4 {
-    //     padding: 0;
-    //     margin: 0.5em 0;
-    // }
     h5 {
         margin: 0.5em 0;
         padding: 0;

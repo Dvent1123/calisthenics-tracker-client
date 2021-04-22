@@ -18,7 +18,7 @@ const App = () => {
             <Link to="/signup">
             <button className='landing-page-start'>                    
               <li>
-                  <a> Sign Up Now! </a>
+                  Sign Up Now!
               </li>
             </button>
             </Link>
@@ -26,7 +26,7 @@ const App = () => {
             <Link to="/signin">
             <button className='landing-page-signin'>
               <li>
-                  <a> Sign In </a>
+                  Sign In
               </li>
             </button>
             </Link>
@@ -38,18 +38,18 @@ const App = () => {
             <h2>
               Why Calisthenics?
             </h2>
-            <div class="divider div-transparent div-arrow-down"></div>
+            <div className="divider div-transparent div-arrow-down"></div>
           </div>
           <div className='card-container'>
-            <div class="card">
+            <div className="card">
 
-              <div class="title">Increase Strength</div>
+              <div className="title">Increase Strength</div>
 
-              <div class="icon">
-                <img src={graph} className='card-icons'/>
+              <div className="icon">
+                <img src={graph} alt='graph' className='card-icons'/>
               </div> 
 
-              <div class="features">
+              <div className="features">
                 <p>
                   Calisthenics inovlves compound exercises performed with your body
                   which allow for improved bodyweight strength. Combined with weighted
@@ -57,15 +57,15 @@ const App = () => {
                 </p>
               </div>
             </div>
-            <div class="card">
+            <div className="card">
 
-              <div class="title">Build Muscle</div>
+              <div className="title">Build Muscle</div>
 
-              <div class="icon">
-                <img src={arm} className='card-icons'/>
+              <div className="icon">
+                <img src={arm} alt='bicep' className='card-icons'/>
               </div>
 
-              <div class="features">
+              <div className="features">
                 <p>
                   Hypertrophy through calisthenics is more than possible and with
                   calisthenics tools such as rings, parallettes, and bands you can 
@@ -73,15 +73,15 @@ const App = () => {
                 </p>
               </div>
             </div>
-            <div class="card">
+            <div className="card">
 
-              <div class="title">Improve Tendon and Joint Health</div>
+              <div className="title">Improve Tendon and Joint Health</div>
 
-              <div class="icon">
-                <img src={joints} className='card-icons'/>
+              <div className="icon">
+                <img src={joints} alt='knee' className='card-icons'/>
               </div>
 
-              <div class="features">
+              <div className="features">
                 <p>
                   Calisthenics allows for a greater range of motion within
                   exercises which increase tendon and joint strength. These movements
