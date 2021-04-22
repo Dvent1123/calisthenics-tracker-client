@@ -75,7 +75,7 @@ const PrivateHome = ({ history}) => {
     //takes in current skill array and id of skill we want to unlock
     const updatedSkillArray = (currentArray, skillID, unlockedSkill) => {
         let removedSkillArray = currentArray.filter(skill => {
-            return skill.id != skillID
+            return skill.id !== skillID
         })
 
         removedSkillArray.splice(unlockedSkill.id, 0, unlockedSkill)
