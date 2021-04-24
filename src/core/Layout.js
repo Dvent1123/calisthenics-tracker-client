@@ -37,7 +37,6 @@ const Layout = ({children, match, history}) => {
                     <Link to="/signin" style={isActive('/signin')}>
                         Sign In
                     </Link>
-                   
                 </li>
             </Fragment>
         )}

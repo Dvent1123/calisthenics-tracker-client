@@ -76,7 +76,7 @@ const Card = ({skill, handleSkillUnlock}) => {
                                     close();
                                     }}
                                 >
-                                    Close Modal
+                                    Close Workout
                                 </button>
                         </div>
                     </div>
