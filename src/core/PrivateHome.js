@@ -86,8 +86,9 @@ const PrivateHome = ({ history}) => {
     return (
         <Layout>
             <div className='title-header'>
-                <h1 className='welcome'>Welcome Back<span className='welcome-name'> {name}</span>
-                    </h1>
+                <h1 className='welcome'> Hello 
+                <span className='welcome-name'> {name} </span>
+                </h1>
             </div>
             <ToastContainer />
             <div className='card-container'>

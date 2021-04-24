@@ -14,11 +14,12 @@ const App = () => {
             <h1 className="index-header">Skills Tracking</h1>
             <p className='index-words'>See where you are in your Calisthenics journey with our interactive Calisthenics map. </p>
             <div className="banner" align="center">
+              <div className="signup_banner"> 
             <br/>
             <Link to="/signup">
             <button className='landing-page-start'>                    
               <li>
-                  Sign Up Now!
+                  Sign Up
               </li>
             </button>
             </Link>
@@ -31,6 +32,7 @@ const App = () => {
             </button>
             </Link>
             <br/> <br/>
+            </div>
             </div>
           </div>
           <div className='landing-page-header'>

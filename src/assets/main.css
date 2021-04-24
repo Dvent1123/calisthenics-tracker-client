@@ -88,6 +88,7 @@ li {
   -webkit-box-align: end;
       -ms-flex-align: end;
           align-items: flex-end;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 .nav-links {
@@ -127,6 +128,7 @@ li {
 .app-title {
   margin-top: 2.5em;
   margin-bottom: .25em;
+  font-family: 'Bebas Neue', Arial, Helvetica, sans-serif;
 }
 
 .index-header {
@@ -140,9 +142,20 @@ li {
   font-size: 1.5em;
 }
 
+.signup_banner {
+  margin-top: 20px;
+  padding-top: 10%;
+  width: 100%;
+  background-image: url("images/signup_banner.png");
+  /*Thank you Danielle Cerullo for the picture. | @dncerullo on UNSPLASH */
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
 .landing-page-start {
   width: 45%;
-  height: 8vh;
+  height: 6vh;
   border: none;
   border-radius: 5em;
   margin: 1em 0;
@@ -168,7 +181,7 @@ li {
 
 .landing-page-signin {
   width: 45%;
-  height: 8vh;
+  height: 6vh;
   border: none;
   border-radius: 5em;
   margin: 1em 0;
@@ -224,6 +237,7 @@ li {
 .card .title {
   font-size: 1.5em;
   color: #0B4F6C;
+  font-family: 'Bebas Neue', Arial, Helvetica, sans-serif;
 }
 
 .card .icon {
