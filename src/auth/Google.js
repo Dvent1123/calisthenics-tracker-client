@@ -19,7 +19,7 @@ const Google = ({ informParent }) => {
         }
 
     return (
-        <div>
+        <div hidden>
             <GoogleLogin
                 clientId={`${process.env.REACT_APP_GOOGLE_CLIENT_ID}`}
                 buttonText="Login"
