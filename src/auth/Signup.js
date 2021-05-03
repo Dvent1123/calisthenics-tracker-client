@@ -72,7 +72,7 @@ const Signup = () => {
             <div className='signin-main'>
                 <ToastContainer />
                 {isAuth() ? <Redirect to="/" /> : null}
-                <h1 className='signin'>Signup</h1>
+                <h1 className='signin'>Sign Up</h1>
                 {signupForm()}
             </div>
         </Layout>
