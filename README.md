@@ -1,70 +1,229 @@
-# Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# calisthenics-tracker-client
 
-## Available Scripts
+This is the client or front-end for a fullstack MERN app. This
+ webapp allows a user to track what calisthenics skills they
+have been able to achieve or accomplish. The inspiration comes
+from a map of "100 Places to go Before I DIe" in which you can
+scratch off a gray layer of a certain place, revealing a cool
+little design underneath. This is meant to be a virtual way
+to do that but for calisthenics skills. I hope to eventually
+expand it from calisthenics to all strength feats.
 
-In the project directory, you can run:
+## Authors
 
-### `npm start`
+- [@danielventura](https://github.com/Dvent1123)
+- [@brentynhanna](https://github.com/Brehtyn)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+  
+## Demo
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+Insert gif or link to demo
 
-### `npm test`
+   - [Exercise Map Hub](exercisemaphub.com)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Tech Stack
 
-### `npm run build`
+**Client:** React, SCSS, Axios
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+**Server:** Node, Express, MongoDB
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+  
+## API Reference
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+#### Get user information
 
-### `npm run eject`
+```http
+  GET /api/user/:id
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+| Parameter | Type     | Description                |
+| :-------- | :------- | :------------------------- |
+| `id` | `string` | **Required**. Id of user |
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+#### Signup new user
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+```http
+  POST /api/signup
+```
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+| Parameter | Type     | Description                       |
+| :-------- | :------- | :-------------------------------- |
+| `data`      | `object` | **Required**. Object with a name, email, and password as strings |
 
-## Learn More
+#### Signin active user
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+```http
+  POST /api/signin
+```
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+| Parameter | Type     | Description                |
+| :-------- | :------- | :------------------------- |
+| `data` | `object` | **Required**. Object with email and password as strings |
 
-### Code Splitting
+#### Update User
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+```http
+  PUT /api/user/update
+```
 
-### Analyzing the Bundle Size
+| Parameter | Type     | Description                |
+| :-------- | :------- | :------------------------- |
+| `data` | `object` | **Required**. Object with name and password |
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+#### Update skills that are unlocked
 
-### Making a Progressive Web App
+```http
+  PUT /api/user/unlock
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+| Parameter | Type     | Description                |
+| :-------- | :------- | :------------------------- |
+| `data` | `array` | **Required**. Array of new skills which are unlocked |
 
-### Advanced Configuration
+#### Update Admin
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+```http
+  PUT /api/admin/update
+```
 
-### Deployment
+| Parameter | Type     | Description                |
+| :-------- | :------- | :------------------------- |
+| `data` | `object` | **Required**. Object with name and password |
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+#### Update skills that are unlocked for admin
 
-### `npm run build` fails to minify
+```http
+  PUT /api/admin/unlock
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+| Parameter | Type     | Description                |
+| :-------- | :------- | :------------------------- |
+| `data` | `array` | **Required**. Array of new skills which are unlocked |
+
+
+#### updatedSkillArray(currentArray,skillID, unlockedSkill)
+
+Takes in the array of currently unlocked skills, the skill Id
+of the skill to be unlocked, and the unlocked skill. It returns
+a new array with the skill unlocked.
+
+#### isActive(path)
+
+Takes in a path and returns a color for link styling.
+
+#### setCookie(key, value)
+
+Sets cookie from js-cookie given a key and value pair.
+
+#### removieCookie(key)
+
+Removes the set cookie using the key.
+
+#### getCookie(key)
+
+Gets the value of the cookie based on the key given.
+
+#### setLocalStorage(key, value)
+
+Sets local storage using a key value pair given
+
+#### removeLocalStorage(key)
+
+Removes local storage using the key given.
+
+#### authenticate(res, next)
+
+Authenticates the user on the client side using a response
+then invoking the next function from express.
+
+#### isAuth
+
+Checks user authentication and returns the user information
+if true and returns false if the user is not authenticated.
+
+#### signout(next)
+Removes cookie and local storage
+
+#### updateUser(res, next)
+Sets local storage to data from res
+## Environment Variables
+
+To run this project, you will need to add the following environment variables to your .env file
+
+`REACT_APP_API`
+
+
+  
+## Deployment
+Deployment was done on Digital Ocean through
+and Ubuntu droplet. The server.js file in here 
+uses the build folder to serve static files.
+
+To deploy this project:
+
+SSH into your Digital Ocean Droplet using
+```bash
+ssh admin@DropletIP
+```
+Use sudo to clone the respository
+```bash
+sudo git clone @RepositoryLink
+```
+Make the build folder
+```bash
+sudo npm run build
+```
+
+  
+## Run Locally
+
+Make a directory for the project
+
+```bash
+mkdir my-roject
+```
+
+Go to the project directory
+
+```bash
+  cd my-project
+```
+
+Clone the project into the project directory
+
+```bash
+  git clone https://github.com/Dvent1123/calisthenics-tracker-client.git
+```
+
+Install dependencies
+
+```bash
+  npm install
+```
+
+Start the project
+
+```bash
+  npm start
+```
+
+  
+## Future Features
+
+- Chat feature so you can talk to your
+  the people in your group
+
+- Way to quickly change the status of a task
+
+- Archive function for when admin approves a task
+  and a task history/summary for the week
+
+- Document page where teams can work on the same
+  document at the same time
+
+- Summary of Tasks left to do and where you are in
+  the process of completing them.
+
+
+  
