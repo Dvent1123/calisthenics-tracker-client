@@ -18,8 +18,6 @@ expand it from calisthenics to all strength feats.
   
 ## Demo
 
-Insert gif or link to demo
-
    - [Exercise Map Hub](exercisemaphub.com)
 
 ## Tech Stack
