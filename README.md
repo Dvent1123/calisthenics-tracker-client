@@ -1,5 +1,5 @@
 
-# calisthenics-tracker-client
+# Stenos (client)
 
 This is the client or front-end for a fullstack MERN app. This
  webapp allows a user to track what calisthenics skills they
