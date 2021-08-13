@@ -2,11 +2,11 @@ import React, { useState } from 'react'
 import {Redirect} from 'react-router-dom'
 import Layout from '../core/Layout'
 import axios from 'axios'
-import { isAuth } from './helpers';
+import {authenticate, isAuth } from './helpers';
 import {ToastContainer, toast} from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.min.css'
 
-const Signup = () => {
+const Signup = ({ history }) => {
     const [values, setValues] = useState({
         name: 'First & Last Name',
         email: 'Email',
@@ -31,8 +31,12 @@ const Signup = () => {
         })
             .then(response => {
                 console.log('SIGNUP SUCCESS', response);
-                setValues({ ...values, name: '', email: '', password: '', buttonText: 'Submitted' });
-                toast.success(response.data.message);
+                authenticate(response, () => {
+                    setValues({...values, name: '', email: '', password: '', buttonText: 'Submitted'})
+                    isAuth() && isAuth().role === 'admin' ? history.push('/admin') : history.push('/athlete_type');
+                })
+                // setValues({ ...values, name: '', email: '', password: '', buttonText: 'Submitted' });
+                // toast.success(response.data.message);
             })
             .catch(error => {
                 console.log('SIGNUP ERROR', error);
@@ -71,7 +75,7 @@ const Signup = () => {
         <Layout>
             <div className='signin-main'>
                 <ToastContainer />
-                {isAuth() ? <Redirect to="/" /> : null}
+                {/* {isAuth() ? <Redirect to="/" /> : null} */}
                 <h1 className='signin'>Signup</h1>
                 {signupForm()}
             </div>

@@ -8,6 +8,7 @@ import Admin from './core/Admin'
 import PrivateRoute from './auth/PrivateRoute'
 import AdminRoute from './auth/AdminRoute'
 import PrivateHome from './core/PrivateHome'
+import AthleteType from './core/Athlete_Type'
 
 const Routes = () => {
     return(
@@ -18,6 +19,7 @@ const Routes = () => {
                 <Route path="/signin" exact component={Signin} />
                 <PrivateRoute path="/private" exact component={Private} />
                 <PrivateRoute path='/home' exact component={PrivateHome} />
+                <PrivateRoute path="/athlete_type" exact component={AthleteType} />
                 <AdminRoute path="/admin" exact component={Admin} />            
             </Switch>
         </BrowserRouter>
