@@ -67,7 +67,12 @@ const Layout = ({children, match, history}) => {
                     <Link style={isActive('/private')} to="/private">
                         Settings
                     </Link>
-                </li>     
+                </li>
+                <li>
+                    <Link style={isActive('/athlete_type')} to="/athlete_type">
+                        Athlete Settings
+                    </Link>
+                </li>       
             </Fragment>
         )}
 
