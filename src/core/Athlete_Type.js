@@ -48,7 +48,11 @@ const Athlete_Type = ({ history}) => {
     const { sex, type, weight } = values
 
     const handleChange = name => event => {
-        setValues({...values, [name]: event.target.value})
+        if(name === 'weight') {
+            setValues({...values, [name]: Number(event.target.value)})
+        } else{
+            setValues({...values, [name]: event.target.value})
+        }
     }
 
     const handleSubmit = event => {
@@ -71,40 +75,76 @@ const Athlete_Type = ({ history}) => {
     }
 
     const athleteForm = () => {
-        return (<form className='form1'>
+        return (<form className='form2'>
             <div className='input-container'>
                 <label>Sex</label>
-                <label>
-                    <input className='input' onChange={handleChange('sex')} value='M' checked={sex === 'M'} type='radio'/>
+                <label className='input-athlete'>
                     Male
+                    <input onChange={handleChange('sex')} value='M' checked={sex === 'M'} type='radio'/>
                 </label>
-                <label>
-                    <input className='input' onChange={handleChange('sex')} value='F' checked={sex === 'F'} type='radio'/>
+                <label className='input-athlete'>
                     Female
+                    <input onChange={handleChange('sex')} value='F' checked={sex === 'F'} type='radio'/>
                 </label>
             </div>
             <div className='input-container'>
                     <label>Athlete Type</label>
-                    <label>
-                        <input className='input' onChange={handleChange('type')} value='power' checked={type === 'power'} type='radio'/>
+                    <label className='input-athlete'>
                         Powerlifter
+                        <input onChange={handleChange('type')} value='power' checked={type === 'power'} type='radio'/>
                     </label>
-                    <label>
-                        <input className='input' onChange={handleChange('type')} value='oly' checked={type === 'oly'} type='radio'/>
+                    <label className='input-athlete'>
                         Olympic Lifter
+                        <input onChange={handleChange('type')} value='oly' checked={type === 'oly'} type='radio'/>
                     </label>
-                    <label>
-                        <input className='input' onChange={handleChange('type')} value='cali' checked={type === 'cali'} type='radio'/>
+                    <label className='input-athlete'>
                         Calisthenics
+                        <input onChange={handleChange('type')} value='cali' checked={type === 'cali'} type='radio'/>
                     </label>
-                    <label>
-                        <input className='input' onChange={handleChange('type')} value='other' checked={type === 'other'} type='radio'/>
+                    <label className='input-athlete'>
                         Other
+                        <input onChange={handleChange('type')} value='other' checked={type === 'other'} type='radio'/>
                     </label>
             </div>
             <div className="input-container">
-                <label htmlFor="weight">Weight</label>
-                <input type="number" id="weight" name="weight" onChange={handleChange('weight')} value={weight}/>
+                <label>Weight Class</label>
+                {   
+                    sex === 'M' ?
+                    <select 
+                        value={weight} 
+                        onChange={handleChange('weight')}
+                        className='input-athlete' 
+                    >
+                        <option value="114">114</option>
+                        <option value="123">123</option>
+                        <option value="132">132</option>
+                        <option value="148">148</option>
+                        <option value="165">165</option>
+                        <option value="181">181</option>
+                        <option value="198">198</option>
+                        <option value="220">220</option>
+                        <option value="242">242</option>
+                        <option value="275">275</option>
+                        <option value="319">319</option>
+                        <option value="320">320+</option>
+                    </select> :
+
+                    <select 
+                        value={weight} 
+                        onChange={handleChange('weight')} 
+                        >
+                        <option value="97">97</option>
+                        <option value="105">105</option>
+                        <option value="114">114</option>
+                        <option value="123">123</option>
+                        <option value="132">132</option>
+                        <option value="148">148</option>
+                        <option value="165">165</option>
+                        <option value="181">181</option>
+                        <option value="198">198</option>
+                        <option value="199">199+</option>
+                    </select>
+                }
             </div>
             <div className='button-container'>
                 <button className='submit' onClick={handleSubmit}>

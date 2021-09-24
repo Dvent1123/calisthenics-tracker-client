@@ -6,19 +6,13 @@ import Oly from '../helpers/Oly'
 import Other from '../helpers/Other'
 
 const Athlete = props => {
-    let { skills, athlete_type, weight, personalRecords, handlePRUpdate } = props
+    let { skills, athlete_type, weight, personalRecords, handlePRUpdate, sex, handleSkillUnlock } = props
     switch ( athlete_type ) {
         case "power":
-            let benchPRArray = []
-            personalRecords.forEach(record => {
-                if(record.id === weight) {
-                    benchPRArray = record.bench
-                }
-            });
             return <Power skills={skills} athlete_weight={weight} 
-            benchPRArray={benchPRArray} handlePRUpdate={handlePRUpdate} personalRecords={personalRecords}/>
+                handlePRUpdate={handlePRUpdate} personalRecords={personalRecords} sex={sex}/>
         case "cali":
-            return <Cali />
+            return <Cali handleSkillUnlock={handleSkillUnlock} skills={skills}/>
         case "oly":
             return <Oly />
         case "other":

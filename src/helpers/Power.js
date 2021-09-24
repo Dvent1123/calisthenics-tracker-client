@@ -4,7 +4,7 @@ import SquatCard from '../core/SquatCard'
 import DeadliftCard from '../core/DeadliftCard'
 
 
-const Power = ({ athlete_weight, personalRecords, handlePRUpdate}) => {
+const Power = ({ athlete_weight, personalRecords, handlePRUpdate, sex}) => {
         const [values, setValues] = useState({
             weight: athlete_weight,
             benchPR: 185,
@@ -13,12 +13,13 @@ const Power = ({ athlete_weight, personalRecords, handlePRUpdate}) => {
             benchArray: [],
             squatArray: [],
             deadliftArray: [],
-            sex: 'M'
+            sex: sex
         })
 
+        //come back and add the record.sex === sex line
         useEffect(() => {
             personalRecords.forEach(record => {
-                if(record.id === weight) {
+                if(record.id === weight && record.sex === sex) {
                     setValues({...values, benchArray: record.bench,
                         squatArray: record.squat,
                     deadliftArray: record.deadlift})
@@ -33,6 +34,7 @@ const Power = ({ athlete_weight, personalRecords, handlePRUpdate}) => {
                 <section>
                     <h1>This is Power Page</h1>
                     <h2>Current Weight: {weight}</h2>
+                    <h2>Gender: {sex}</h2>
                     <br />
                     <br />
                     <h3>Bench</h3>
@@ -41,7 +43,7 @@ const Power = ({ athlete_weight, personalRecords, handlePRUpdate}) => {
                          benchArray.map((benchWeights, index) => {
                             return <BenchCard key={index} benchWeights={benchWeights}
                             personalRecords={personalRecords} handlePRUpdate={handlePRUpdate}
-                            weight={weight} benchArray={benchArray}/>                        
+                            weight={weight} benchArray={benchArray} index={index}/>                        
                         }) :
                         <h1>Loading...</h1>
                     }
@@ -52,7 +54,7 @@ const Power = ({ athlete_weight, personalRecords, handlePRUpdate}) => {
                         squatArray.map((squatWeights, index) => {
                             return <SquatCard key={index} squatWeights={squatWeights}
                             personalRecords={personalRecords} handlePRUpdate={handlePRUpdate}
-                            weight={weight} squatArray={squatArray}/>                        
+                            weight={weight} squatArray={squatArray} index={index}/>                        
                         }) :
                         <h1>Loading...</h1>
                     }
@@ -63,7 +65,7 @@ const Power = ({ athlete_weight, personalRecords, handlePRUpdate}) => {
                         deadliftArray.map((deadliftWeights, index) => {
                             return <DeadliftCard key={index} deadliftWeights={deadliftWeights}
                             personalRecords={personalRecords} handlePRUpdate={handlePRUpdate}
-                            weight={weight} deadliftArray={deadliftArray}/>                        
+                            weight={weight} deadliftArray={deadliftArray} index={index}/>                        
                         }) :
                         <h1>Loading...</h1>
                     }

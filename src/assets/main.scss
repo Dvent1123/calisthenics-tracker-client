@@ -290,6 +290,23 @@ li {
     padding: 1em 0;
 }
 
+.input-athlete {
+    width: 90%;
+    color: rgb(38, 50, 56);
+    font-weight: bold;
+    font-size: 1em;
+    letter-spacing: 1.15px;
+    background: rgba(136, 126, 126, 0.04);
+    margin: 0.5em 2.5em;
+    padding: 0.5em 2.5em;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+    box-sizing: border-box;
+    border: 2px solid rgba(0, 0, 0, 0.02);
+    text-align: center;
+}
+
 .input {
     width: 76%;
     color: rgb(38, 50, 56);

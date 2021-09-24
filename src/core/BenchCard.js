@@ -4,8 +4,13 @@ import Popup from 'reactjs-popup'
 import unlock from '../assets/images/unlock.svg'
 import bench from '../assets/images/exercises/bench.svg'
 import lock from '../assets/images/lock.svg'
+import novice from '../assets/images/exercises/novice.svg'
+import beginner from '../assets/images/exercises/beginner.svg'
+import intermediate from '../assets/images/exercises/intermediate.svg'
+import elite from '../assets/images/exercises/elite.svg'
 
-const BenchCard = ({ benchWeights, personalRecords, handlePRUpdate, weight, benchArray}) => {
+const images = [novice, beginner, intermediate, elite]
+const BenchCard = ({ benchWeights, personalRecords, handlePRUpdate, weight, benchArray, index}) => {
     const { benchWeight, locked } = benchWeights
     const [isOn, toggleIsOn] = useToggleCard(locked)
     const exercise = "bench"
@@ -26,7 +31,7 @@ const BenchCard = ({ benchWeights, personalRecords, handlePRUpdate, weight, benc
                         <img alt='unlock' className='lock-image' src={unlock} />                
                     </div>
                     <div className='property-image'>
-                        <img alt='skill' className='skill-image' src={bench} />
+                        <img alt='skill' className='skill-image' src={images[index]} />
                     </div>
                 </div>
             }
@@ -43,7 +48,7 @@ const BenchCard = ({ benchWeights, personalRecords, handlePRUpdate, weight, benc
                             </button>
                             <div className="header">
                                 <h2 className='warning-header'>Warning!</h2>
-                                 Are you sure you've mastered this skill? Once you unlock it you will not be able to lock it! </div>
+                                 Are you sure you've hit this PR? You can't undo once you've unlocked it! </div>
                             <div className="actions">
                                 <button
                                     className="submit"

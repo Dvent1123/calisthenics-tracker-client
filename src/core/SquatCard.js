@@ -4,8 +4,13 @@ import Popup from 'reactjs-popup'
 import unlock from '../assets/images/unlock.svg'
 import squat from '../assets/images/exercises/bw_squat.svg'
 import lock from '../assets/images/lock.svg'
+import novice from '../assets/images/exercises/novice.svg'
+import beginner from '../assets/images/exercises/beginner.svg'
+import intermediate from '../assets/images/exercises/intermediate.svg'
+import elite from '../assets/images/exercises/elite.svg'
 
-const SquatCard = ({ squatWeights, personalRecords, handlePRUpdate, weight, squatArray}) => {
+const images = [novice, beginner, intermediate, elite]
+const SquatCard = ({ squatWeights, personalRecords, handlePRUpdate, weight, squatArray, index}) => {
     const { squatWeight, locked } = squatWeights
     const [isOn, toggleIsOn] = useToggleCard(locked)
     const exercise = "squat"
@@ -26,7 +31,7 @@ const SquatCard = ({ squatWeights, personalRecords, handlePRUpdate, weight, squa
                         <img alt='unlock' className='lock-image' src={unlock} />                
                     </div>
                     <div className='property-image'>
-                        <img alt='skill' className='skill-image' src={squat} />
+                        <img alt='skill' className='skill-image' src={images[index]} />
                     </div>
                 </div>
             }

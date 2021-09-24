@@ -15,6 +15,7 @@ const PrivateHome = ({ history }) => {
         email: '',
         typeOfAthlete: '',
         weight: 0,
+        sex: 'M',
         personalRecords: [],
         buttonText: 'Submit'
     })
@@ -35,8 +36,8 @@ const PrivateHome = ({ history }) => {
         })
         .then(res => {
             console.log('private profile', res)
-            const { role, name, email, exercises, typeOfAthlete, weight, personalRecords } = res.data
-            setValues({role, name, email, typeOfAthlete, weight, personalRecords})
+            const { role, name, email, exercises, typeOfAthlete, weight, personalRecords, sex } = res.data
+            setValues({role, name, email, typeOfAthlete, weight, personalRecords, sex})
             //function to filter out exercises based on athlete type
             let athleteExercises = filteredSkillArrayByAthlete(exercises, typeOfAthlete)
             setExerciseData(athleteExercises)
@@ -52,7 +53,7 @@ const PrivateHome = ({ history }) => {
         })
     }
 
-    const { name, typeOfAthlete, weight, personalRecords } = values
+    const { name, typeOfAthlete, weight, personalRecords, sex } = values
 
     const handleSkillUnlock = (skillID, unlockedSkill) => {
         let unlockedSkillsArray = updatedSkillArray(exerciseData, skillID, unlockedSkill)
@@ -173,7 +174,7 @@ const PrivateHome = ({ history }) => {
         })
 
         removedSkillArray.splice(unlockedSkill.id, 0, unlockedSkill)
-
+        console.log(removedSkillArray)
         return removedSkillArray
     }
 
@@ -189,7 +190,7 @@ const PrivateHome = ({ history }) => {
                 {
                     typeOfAthlete ?
                     <Athlete athlete_type={typeOfAthlete} skills={exerciseData} 
-                    personalRecords={personalRecords} weight={weight}
+                    personalRecords={personalRecords} weight={weight} sex={sex}
                     handlePRUpdate={handlePRUpdate}
                     handleSkillUnlock={handleSkillUnlock}/> :
                     <div><h1>Loading...</h1></div>                
