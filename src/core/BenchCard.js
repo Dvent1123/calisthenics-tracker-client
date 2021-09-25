@@ -2,7 +2,6 @@ import React from 'react'
 import useToggleCard from '../helpers/ToggleCard'
 import Popup from 'reactjs-popup'
 import unlock from '../assets/images/unlock.svg'
-import bench from '../assets/images/exercises/bench.svg'
 import lock from '../assets/images/lock.svg'
 import novice from '../assets/images/exercises/novice.svg'
 import beginner from '../assets/images/exercises/beginner.svg'
@@ -23,7 +22,9 @@ const BenchCard = ({ benchWeights, personalRecords, handlePRUpdate, weight, benc
             <div className='property-card'>
                     <div className='lock'>
                         <img alt='lock' className='lock-image' src={lock} />
-                        <h4 className='skill-title'> {benchWeight} </h4>                
+                        <div className="weight-container">
+                            <h4 className='weight-text'> {benchWeight} </h4>                
+                        </div>
                     </div> 
                 </div> :
                 <div className="property-card">

@@ -52,9 +52,10 @@ const images = [planche, fl, pu, pullover,
                 tuck_fl]
 
 const Card = ({skill, handleSkillUnlock}) => {
-    const {id, exercise, locked, diff, desc, img} = skill
+    const {id, exercise, locked, diff, desc, img, category} = skill
     const [isOn, toggleIsOn] = useToggleCard(locked)
     const unlockSkill = {
+        category: category,
         id: id,
         exercise: exercise,
         locked: false,

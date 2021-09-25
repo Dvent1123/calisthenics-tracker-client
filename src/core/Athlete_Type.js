@@ -66,6 +66,7 @@ const Athlete_Type = ({ history}) => {
             }
         })
         .then(res => {
+            //Need to update personal record value here, upon submit
             isAuth() && isAuth.role === 'admin' ? history.push('/admin') : history.push('/home')
         })
         .catch(err => {
@@ -93,17 +94,13 @@ const Athlete_Type = ({ history}) => {
                         Powerlifter
                         <input onChange={handleChange('type')} value='power' checked={type === 'power'} type='radio'/>
                     </label>
-                    <label className='input-athlete'>
+                    {/* <label className='input-athlete'>
                         Olympic Lifter
                         <input onChange={handleChange('type')} value='oly' checked={type === 'oly'} type='radio'/>
-                    </label>
+                    </label> */}
                     <label className='input-athlete'>
                         Calisthenics
                         <input onChange={handleChange('type')} value='cali' checked={type === 'cali'} type='radio'/>
-                    </label>
-                    <label className='input-athlete'>
-                        Other
-                        <input onChange={handleChange('type')} value='other' checked={type === 'other'} type='radio'/>
                     </label>
             </div>
             <div className="input-container">
@@ -131,7 +128,8 @@ const Athlete_Type = ({ history}) => {
 
                     <select 
                         value={weight} 
-                        onChange={handleChange('weight')} 
+                        onChange={handleChange('weight')}
+                        className='input-athlete'  
                         >
                         <option value="97">97</option>
                         <option value="105">105</option>

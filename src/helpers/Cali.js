@@ -2,10 +2,10 @@ import React from 'react'
 import Card from '../core/Card'
 
 const Cali = ({handleSkillUnlock, skills}) => {
-    
     return (
         <section>
             <h1>This is Cali Page</h1>
+            <div className="real-card-container">
             {
                 skills ?
                 skills.map((skill, index) => {
@@ -13,6 +13,7 @@ const Cali = ({handleSkillUnlock, skills}) => {
                 }) :
                 <h1>Loading...</h1>
             }
+            </div>
         </section>
 )}
 

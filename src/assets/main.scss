@@ -30,15 +30,19 @@ li {
 //Global Fonts
 h1 {
     font-size: 3em;
+    color: #263238;
 }
 h2 {
     font-size: 2em;
+    color: #546E7A;
 }
 h3 {
     font-size: 1.5em;
+    color: #90A4AE;
 }
 p {
     font-size: 1em;
+    color: #90A4AE;
 }
 
 .wrapper {
@@ -263,6 +267,7 @@ li {
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
     margin-top: 1em;
 }
 
@@ -376,9 +381,14 @@ li {
     color: #01BAEF;
 }
 
-
 //Card
 .card-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.real-card-container{
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -430,6 +440,7 @@ li {
 
 .lock {
     display: flex;
+    height: 100%;
 }
 
 .lock-image{
@@ -439,11 +450,35 @@ li {
     padding:0;
 }
 
+.weight-container{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    height: 100%;
+    width: 100vw;
+}
+
 .skill-title {
     width: 50%;
     text-align: center;
     margin: 1em 0 0 0;
     text-transform: uppercase;
+}
+
+.weight-text{
+    font-size: 110px;
+    color:black !important;
+    text-shadow: 4px 4px 0px #01BAEF;
+    margin: 0;
+}
+@keyframes fadeIn {
+    0% {
+        opacity: 0
+    }
+
+    100% {
+        opacity: 1;
+    }
 }
 
 .property-description
@@ -468,6 +503,44 @@ li {
         padding: 0;
     }
 
+}
+
+
+.stats-title-container{
+    h1{
+        margin-bottom: 0;
+    }
+    p{
+        font-size: 1.5em;
+    }
+}
+
+.stats-container{
+    display: flex;
+    flex-direction: column;
+    text-transform: uppercase;
+    font-size: .75em;
+}
+
+.scale-icon, .female-icon, .male-icon{
+    font-size: .8em;
+}
+
+.sbd-title-container{
+    display: flex;
+    align-items: center;
+
+    .sbd-logo{
+        height: 3em;
+        width: 3em;
+    }
+
+    h3{
+        font-size: 2em;
+        font-weight: bold;
+        color: #263238;
+        padding: 0em 1em 0em 1em;
+    }
 }
 
 .btn-container {
@@ -589,4 +662,45 @@ li {
         margin: 2em;
     }
     
+
+    .card-container{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .real-card-container{
+        width: 80vw;
+        margin: 0 auto;
+        max-width: 1170px;
+        display: grid;
+        grid-template-columns: auto auto;
+        gap: 2.25rem 2rem;
+        justify-items: center;
+        border-radius: var(--border-radius);
+    }
+
+    .stats-container{
+        flex-direction: unset;
+        justify-content: space-between;
+    }    
+}
+
+
+@media screen and (min-width: 1000px){
+    .real-card-container{
+        grid-template-columns: auto auto auto;
+        gap: 2.25rem 2rem 2.25rem;
+    }
+
+    .stats-container{
+        width: 80%;
+    }
+}
+
+@media screen and (min-width: 1380px){
+    .real-card-container{
+        grid-template-columns: auto auto auto auto;
+        gap: 2.25rem 2rem 2.25rem;
+    }
 }

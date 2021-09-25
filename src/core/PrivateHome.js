@@ -41,7 +41,6 @@ const PrivateHome = ({ history }) => {
             //function to filter out exercises based on athlete type
             let athleteExercises = filteredSkillArrayByAthlete(exercises, typeOfAthlete)
             setExerciseData(athleteExercises)
-            console.log('these are the exercises: ' + exercises[0].exercise)
         })
         .catch(error => {
             console.log('private profile error', error)
@@ -67,8 +66,7 @@ const PrivateHome = ({ history }) => {
             }
         })
         .then(res => {
-            console.log('skill unlock success', res)
-            setValues({ ...values, buttonText: 'Submitted'})
+            setExerciseData(res.data.skillsArray)
             toast.success('Skill unlocked!')
         })
         .catch(err => {
@@ -83,7 +81,6 @@ const PrivateHome = ({ history }) => {
     const handlePRUpdate = (prArray, newPR, oldPRArray, weight, exercise) => {
         let updatedPersonalRecordsArray = updatePersonalRecordsArray(prArray, newPR, oldPRArray, weight, exercise)
 
-        console.log('This is the new UpdatedArray', updatedPersonalRecordsArray)
         axios({
             method: 'PUT',
             url: `${process.env.REACT_APP_API}/user/prupdate`,
@@ -163,7 +160,6 @@ const PrivateHome = ({ history }) => {
         let filteredArray = exerciseArray.filter(skill => {
             return skill.category === athleteType
         })
-
         return filteredArray
     }
 
@@ -172,9 +168,7 @@ const PrivateHome = ({ history }) => {
         let removedSkillArray = currentArray.filter(skill => {
             return skill.id !== skillID
         })
-
         removedSkillArray.splice(unlockedSkill.id, 0, unlockedSkill)
-        console.log(removedSkillArray)
         return removedSkillArray
     }
 

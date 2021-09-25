@@ -2,7 +2,6 @@ import React from 'react'
 import useToggleCard from '../helpers/ToggleCard'
 import Popup from 'reactjs-popup'
 import unlock from '../assets/images/unlock.svg'
-import deadlift from '../assets/images/exercises/deadlift.svg'
 import lock from '../assets/images/lock.svg'
 import novice from '../assets/images/exercises/novice.svg'
 import beginner from '../assets/images/exercises/beginner.svg'
@@ -23,7 +22,9 @@ const DeadliftCard = ({ deadliftWeights, personalRecords, handlePRUpdate, weight
             <div className='property-card'>
                     <div className='lock'>
                         <img alt='lock' className='lock-image' src={lock} />
-                        <h4 className='skill-title'> {deadliftWeight} </h4>                
+                        <div className="weight-container">
+                            <h4 className='weight-text'> {deadliftWeight} </h4>                
+                        </div>
                     </div> 
                 </div> :
                 <div className="property-card">
