@@ -156,6 +156,8 @@ const Athlete_Type = ({ history}) => {
         <Layout>
             <div className='signin-main'>
                 <ToastContainer />
+                <h1 className='signin'>Athlete Settings</h1>
+                <h3>Athlete Update</h3>
                 {athleteForm()}
             </div>
         </Layout>

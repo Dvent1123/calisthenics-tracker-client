@@ -10,9 +10,9 @@ const App = () => {
       <Layout>
         <div className='whole-landing-page-container'>
           <div className='landing-page-container'>
-            <h3 className='app-title'>3 Skills to Master Before I Die</h3>
-            <h1 className="index-header">Skills Tracking</h1>
-            <p className='index-words'>See where you are in your Calisthenics journey with our interactive Calisthenics map. </p>
+            <h3 className='app-title'>Strength Feats to master before i die</h3>
+            <h1 className="index-header">Strength Tracking</h1>
+            <p className='index-words'>See where you are in your strength journey with our interactive strength map. </p>
             <div className="banner" align="center">
               <div className="signup_banner"> 
             <br/>
@@ -38,7 +38,7 @@ const App = () => {
           <div className='landing-page-header'>
           {/* spacer */}
             <h2>
-              Why Calisthenics?
+              Why Strength Train?
             </h2>
             <div className="divider div-transparent div-arrow-down"></div>
           </div>
@@ -53,7 +53,7 @@ const App = () => {
 
               <div className="features">
                 <p>
-                  Calisthenics inovlves compound exercises performed with your body
+                  Resistance training inovlves compound exercises performed with your body
                   which allow for improved bodyweight strength. Combined with weighted
                   calisthenics you can take your strength to the next level.
                 </p>
@@ -85,7 +85,7 @@ const App = () => {
 
               <div className="features">
                 <p>
-                  Calisthenics allows for a greater range of motion within
+                  Strength training allows for a greater range of motion within
                   exercises which increase tendon and joint strength. These movements
                   also require high amounts of balance and control to improve your overall performance.
                 </p>

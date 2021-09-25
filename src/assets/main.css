@@ -508,7 +508,9 @@ li {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  height: 100%;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
 }
 
 .lock-image {
@@ -534,6 +536,9 @@ li {
 
 .skill-title {
   width: 50%;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
   text-align: center;
   margin: 1em 0 0 0;
   text-transform: uppercase;
@@ -568,7 +573,7 @@ li {
   background-color: #FAFAFC;
   height: 18em;
   width: 14em;
-  top: 0px;
+  top: 0em;
   bottom: 0em;
   -webkit-transition: all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
   transition: all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
@@ -633,6 +638,12 @@ li {
 
 .btn-container {
   padding: 1.5em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .unlock-btn {
