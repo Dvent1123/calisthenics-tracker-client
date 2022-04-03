@@ -22,7 +22,7 @@ to do that but for calisthenics and strength skills.
   
 ## Demo
 
-- [Exercise Map Hub](exercisemaphub.com)
+- [Exercise Map Hub](https://exercisemaphub.com/)
 
 ## Tech Stack
 
