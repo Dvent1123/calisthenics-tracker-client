@@ -35,12 +35,12 @@ h1 {
 
 h2 {
   font-size: 2em;
-  color: #546E7A;
+  color: #263238;
 }
 
 h3 {
   font-size: 1.5em;
-  color: #90A4AE;
+  color: #263238;
 }
 
 p {
@@ -130,20 +130,22 @@ li {
 }
 
 .app-title {
-  margin-top: 2.5em;
-  margin-bottom: .25em;
+  margin-top: 2.5em 0 .25em 0;
   font-family: 'Bebas Neue', Arial, Helvetica, sans-serif;
 }
 
 .index-header {
-  margin: .15em 0;
+  margin: 0;
   color: var(--header-color);
   font-size: 4em;
+  letter-spacing: .15rem;
+  text-shadow: 2px 1px #ffffff;
 }
 
 .index-words {
-  margin: .25em 0;
+  margin: .5em 0 1em 0;
   font-size: 1.5em;
+  color: #fff;
 }
 
 .signup_banner {
@@ -151,61 +153,38 @@ li {
   width: 100%;
   background-image: url("images/signup_banner.png");
   /*Thank you Danielle Cerullo for the picture. | @dncerullo on UNSPLASH */
-  background-size: 100%;
+  background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
+  padding: 4rem;
 }
 
-.landing-page-start {
+.landing-page-start, .landing-page-signin  {
   width: 45%;
-  height: 6vh;
+  max-width: 300px;
+  min-width: 200px;
+  height: 7vh;
+  min-height: 40px;
+  max-height: 55px;
   border: none;
-  border-radius: 5em;
-  margin: 1em 0;
+  border-radius: 3em;
+  margin: 1em 2em;
   background: -webkit-gradient(linear, left top, right top, from(#01BAEF), to(#01BAEF));
   background: linear-gradient(to right, #01BAEF, #01BAEF);
   -webkit-box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.04);
           box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.04);
 }
 
-.landing-page-start li {
+.landing-page-start li, .landing-page-signin li {
   color: white;
   font-size: 1.25em;
   font-weight: bold;
 }
 
-.landing-page-start:hover {
+.landing-page-start:hover, .landing-page-signin:hover {
   cursor: pointer;
-}
-
-.landing-page-start:hover li {
-  text-transform: uppercase;
-}
-
-.landing-page-signin {
-  width: 45%;
-  height: 6vh;
-  border: none;
-  border-radius: 5em;
-  margin: 1em 0;
-  background: -webkit-gradient(linear, left top, right top, from(#01BAEF), to(#01BAEF));
-  background: linear-gradient(to right, #01BAEF, #01BAEF);
-  -webkit-box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.04);
-          box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.04);
-}
-
-.landing-page-signin li {
-  color: white;
-  font-size: 1.25em;
-  font-weight: bold;
-}
-
-.landing-page-signin:hover {
-  cursor: pointer;
-}
-
-.landing-page-signin:hover li {
-  text-transform: uppercase;
+  background: -webkit-gradient(linear, left top, right top, from(#0184ef), to(#01BAEF));
+  background: linear-gradient(to right, #0184ef, #01BAEF);
 }
 
 .landing-page-header {
@@ -286,8 +265,9 @@ li {
 .signin-main {
   background-color: #FFFFFF;
   width: 100%;
-  height: 90vh;
-  border-radius: 1.5em;
+  max-width: 600px;
+  height: fit-content;
+  border-radius: 1em;
   -webkit-box-shadow: 0px 11px 35px 2px rgba(0, 0, 0, 0.14);
           box-shadow: 0px 11px 35px 2px rgba(0, 0, 0, 0.14);
   display: -webkit-box;
@@ -300,26 +280,22 @@ li {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  margin-top: 1em;
+  margin: 2rem auto;
 }
 
 .signin {
-  margin: 0.5em 0;
-  padding: 0.5em 0;
+  padding: 1em 0;
   color: var(--header-color);
   font-weight: bold;
   font-size: 2em;
 }
 
 .form1 {
-  padding-top: 2em;
+  padding-top: 1em;
 }
 
 .form2 {
-  padding-top: 0em;
+  margin-top: -1.5em;
 }
 
 .input-container {
@@ -409,6 +385,7 @@ li {
   -webkit-box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.04);
           box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.04);
   padding: 0.75em 2.5em;
+  margin-bottom: 50px;
 }
 
 .google-button {

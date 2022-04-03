@@ -27,7 +27,7 @@ const Layout = ({children, match, history}) => {
 
         {!isAuth() && (
             <Fragment>
-                <li>
+                <li className='nav-link'>
                     <Link to="/signup" style={isActive('/signup')}>
                         Sign Up
                     </Link>
@@ -35,7 +35,7 @@ const Layout = ({children, match, history}) => {
                 <li className='nav-link'>
                     
                     <Link to="/signin" style={isActive('/signin')}>
-                        Sign In
+                        Log In
                     </Link>
                 </li>
             </Fragment>
