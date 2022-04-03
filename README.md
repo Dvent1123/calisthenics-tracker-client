@@ -11,7 +11,7 @@ to do that but for calisthenics and strength skills.
 
 ## Screenshot(s)
 
-![Website Screenshot](https://github.com/Dvent1123/calisthenics-tracker-client/main/public/screenshot.JPG?raw=true)
+![Website Screenshot](https://github.com/Dvent1123/calisthenics-tracker-client/blob/main/public/screenshot.JPG?raw=true)
 
 
 ## Authors
