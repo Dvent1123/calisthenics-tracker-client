@@ -1,14 +1,18 @@
 
-# Stenos (client)
+# Calisthenics-Tracker Client
 
-This is the client or front-end for a fullstack MERN app. This
- webapp allows a user to track what calisthenics skills they
+This is the client or front-end for a fullstack MERN app. This 
+webapp allows a user to track what calisthenics or strength skills they
 have been able to achieve or accomplish. The inspiration comes
-from a map of "100 Places to go Before I DIe" in which you can
+from a map of "100 Places to go Before I Die" in which you can
 scratch off a gray layer of a certain place, revealing a cool
 little design underneath. This is meant to be a virtual way
-to do that but for calisthenics skills. I hope to eventually
-expand it from calisthenics to all strength feats.
+to do that but for calisthenics and strength skills.
+
+## Screenshot(s)
+
+![Website Screenshot](https://github.com/Dvent1123/calisthenics-tracker-client/main/public/screenshot.JPG?raw=true)
+
 
 ## Authors
 
@@ -18,7 +22,7 @@ expand it from calisthenics to all strength feats.
   
 ## Demo
 
-   - [Exercise Map Hub](exercisemaphub.com)
+- [Exercise Map Hub](exercisemaphub.com)
 
 ## Tech Stack
 
